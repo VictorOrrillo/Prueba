@@ -25,9 +25,9 @@ namespace Prueba
 
         private void LoadCascadeClassifier()
         {
-            var cascadeFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "haarcascade_frontalface_default.xml");
+            var cascadeFilePath = "haarcascade_frontalface_default.xml";
 
-            faceCascade = new CascadeClassifier(cascadeFilePath);
+            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "haarcascade_frontalface_default.xml");
         }
 
         private async void RegisterFaceButton_Clicked(object sender, EventArgs e)
